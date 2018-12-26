@@ -117,8 +117,6 @@ getData("../mock/data.json");
 //实现页面渲染，包括img、info和btn   render
 //点击按钮     bindClick
 //控制音频播放和暂停、切歌     audioControl
-
 //进度条运动和拖拽   progressBar
-
 //图片旋转   rotate
 //列表切歌   playList
