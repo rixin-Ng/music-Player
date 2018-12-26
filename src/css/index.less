@@ -1,0 +1,195 @@
+*{
+    padding:0;
+    margin:0;
+    list-style:none;
+    body{
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+            .wrapper{
+            width: 100vw;
+            height: 100vh;
+            padding-top: 60px;
+            box-sizing: border-box;
+            background-color: rgba(0, 0, 0, 0.2);
+            .album-cover{
+                position: relative;
+                width: 60%;
+                height:0;
+                padding-top:60%;
+                background-color: #000;
+                margin: 0 auto;
+                border-radius: 50%;
+                .img-box{
+                    position: absolute;
+                    display: flex;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    border-radius: 50%;
+                    align-items: center;
+                    justify-content: center;
+                }
+                img{
+                    border-radius: 50%;
+                    width: 80%;
+                    height: 80%;
+                }
+            }
+            .song-info{
+                margin-top: 20px;
+                width: 100%;
+                height: 120px;
+                // border: 1px solid #000;
+                color: #fff;
+                text-align: center;
+                .song-name{
+                    font-size: 18px;
+                    margin-bottom:8px;
+                    line-height: 30px;
+                }
+                .singer,
+                .album{
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+            }
+            .progress-wrap{
+                display: flex;
+                .progress-bar{
+                    flex:1;
+                    position:relative;
+                    padding:0 3px;
+                    color: #fff;
+                    overflow: hidden;
+                    .base,
+                    .progress{
+                        position: absolute;
+                        top: 20px;
+                        height: 1px;
+                        width: 100%;
+                    }
+                    .base{
+                        background-color: rgba(255, 255, 255, 0.6);
+                    }
+                    .progress{
+                        background-color : #fff;
+                        transform: translateX(-100%);
+                        position: relative;
+                        .dot{
+                            position: absolute;
+                            width: 21px;
+                            height: 21px;
+                            right: -10px;
+                            top : -10px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            &::after{
+                                content:'';
+                                display: block;
+                                height: 5px;
+                                width: 5px;
+                                background-color: #fff;
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+                }
+                .cur-time,
+                .all-time{
+                    width: 70px;
+                    height: 40px;
+                    text-align: center;
+                    line-height: 40px;
+                    color: #fff;
+                    font-size: 14px;
+                }
+            }
+            .control-btn{
+                width: 100%;
+                height: 60px;
+                position: absolute;
+                bottom: 0;
+                display:flex;
+                background-color: rgba(0, 0, 0, 0.6);
+                .btn{
+                    flex:1;
+                    background-repeat: no-repeat;
+                    background-size: 25% 25%;
+                    background-position: 50%;
+                }
+                .like{
+                    background-image: url('../../dist/images/icon-like.png');
+                    &.liking{
+                            background-image: url('../../dist/images/icon-like-solid.png');
+                    }
+                }
+                .prev{
+                    background-image: url('../../dist/images/icon-prev.png');
+                }
+                .play{
+                    background-image: url('../../dist/images/icon-play.png');
+                    &.pause{
+                        background-image: url('../../dist/images/icon-pause.png');
+                    }
+                }
+                .next{
+                    background-image: url('../../dist/images/icon-next.png');
+                }
+                .list{
+                    background-image: url('../../dist/images/icon-list.png');
+                }
+            }
+        }
+        
+    }
+}
+.play-list{
+    position: fixed;
+    bottom: 0;
+    background-color : #fff;
+    width :100%;
+    transform: translateY(100%);
+    transition : transform 200ms ease-out;
+    &.show{
+        transform: translateY(0);
+    }
+    .play-header,
+    .close-btn{
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        font-size: 16px;
+    }
+    .close-btn{
+        border-top :1px solid rgba(0,0,0,.1);
+        
+    }
+    .list-wrapper {
+        li{
+            padding : 10px;
+            height: 20px;
+            line-height: 20px;
+            border-top :1px solid rgba(0,0,0,.1);
+            font-family: Tahoma,Arial,"宋体";
+            h3{
+                font-size : 14px;
+                span{
+                    font-size : 12px;
+                }
+            }
+            &.sign{
+                h3{
+                    color : red;
+                    span{
+                        color : red;
+                    }
+                }
+            }
+        }
+    }
+}
+
+           
