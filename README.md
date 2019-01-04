@@ -9,6 +9,7 @@
 4. 控制歌曲索引模块:管理当前播放歌曲的索引，歌曲切换时需要获取歌曲索引，这个功能单独封装成模块能防止外部随意更改歌曲索引。
 5. 播放列表模块：主页面上播放列表按钮对应的功能模块，改变播放列表模块的显示隐藏，渲染列表信息、绑定点击事件，标记当前播放歌曲。
 6. 管理进度条模块：渲染歌曲总时长、管理进度条暂停运动、开始运动，动态更新已播放时长并根据已播放时长的百分比来渲染进度条位置。这里运用requestAnimationFrame方法对动画进行了优化。
+
 ![](https://github.com/rixin-Ng/music-Player/raw/master/show/1.png) 
 ![](https://github.com/rixin-Ng/music-Player/raw/master/show/2.png) 
 ![](https://github.com/rixin-Ng/music-Player/raw/master/show/3.png) 
